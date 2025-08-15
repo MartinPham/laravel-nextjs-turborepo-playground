@@ -1,0 +1,19 @@
+{
+  "name": "@repo/api-client",
+  "type": "module",
+  "scripts": {
+    "dev": "orval --watch --config orval.config.cjs & tsc --watch --preserveWatchOutput",
+    "build": "tsc"
+  },
+  "exports": {
+    ".": {
+      "types": "./src/client.ts",
+      "default": "./dist/client.js"
+    }
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "orval": "^7.11.2",
+    "typescript": "latest"
+  }
+}
